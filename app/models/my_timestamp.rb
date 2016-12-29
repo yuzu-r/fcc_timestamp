@@ -12,7 +12,7 @@ class MyTimestamp
         @natural = nil
       else
         @unix = my_date.to_time.to_i
-        @natural = my_date.strftime("%B %e, %Y")
+        @natural = my_date.strftime("%B %-d, %Y")
       end
     end
   end
@@ -22,7 +22,7 @@ class MyTimestamp
   end
 
   def convert_to_natural(unix_timestamp)
-    return DateTime.strptime(unix_timestamp,'%s').strftime("%B %e, %Y")
+    return DateTime.strptime(unix_timestamp,'%s').strftime("%B %-d, %Y")
   end
 
   def check_date_format(input)

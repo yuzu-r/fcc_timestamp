@@ -5,9 +5,22 @@
   <li>a number representing a unix timestamp, e.g. 1483228800</li>
   <li>a date in natural format (month day, yyyy), e.g. January 1, 2017</li>
 </ul>
-<p>JSON is returned with both unix and natural representations of the date, or nulls if the date can't be parsed.</p>
+<p>JSON is returned with both unix and natural representations of the date, or nulls if the date can't be parsed. (It uses Ruby's strptime function for date parsing.)</p>
 
-Example usage:
+<h3>Example URL: </h3>
 
-<p>This uses Ruby's strptime function to parse the date.</p>
-<p>This is a Rails 4 project. </p>
+<span class="code">
+  https://yuzu-fcc-timestamp.herokuapp.com/api/v1/timestamps/1483228800
+</span>
+<br/>
+<span class="code">
+https://yuzu-fcc-timestamp.herokuapp.com/api/v1/timestamps/January 1, 2017
+</span>
+
+<h3>Example Output:</h3>
+<span class="code">
+  {"unix":"1483228800","natural":"January 1, 2017"}
+</span>
+
+<p>This is a Rails 4 project. Feel free to visit the <a href='https://github.com/yuzu-r/fcc_timestamp' target='_blank'>github repo</a>.</p>
+<p>Learn more about <a href='https://www.freecodecamp.com' target='_blank'>FreeCodeCamp</a>.</p>
